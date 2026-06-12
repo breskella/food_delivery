@@ -1,0 +1,84 @@
+.order-item {
+    display: grid;
+    grid-template-columns: 0.6fr 2fr 1fr 1fr 1fr;
+    align-items: start;
+    gap: 20px;
+    border: 1px solid var(--color-border);
+    padding: 18px;
+    margin: 20px 0px;
+    font-size: 14px;
+    color: var(--color-text);
+    background: white;
+    border-radius: var(--radius-md);
+}
+
+.order-item-food, .order-item-name {
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+/* التنسيقات التكْمِيلية لتنظيم العناصر الداخلية بناءً على الـ Grid */
+.order-item-name {
+    margin-top: 6px;
+    margin-bottom: 5px;
+}
+
+.order-item-address {
+    line-height: 1.5;
+}
+
+.order-item select {
+    background-color: var(--color-primary-light);
+    border: 1px solid var(--color-border);
+    width: max-content;
+    padding: 8px 12px;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+/* cleaned duplicate rules above */
+
+.order-list {
+    max-width: 1200px;
+    margin: 12px auto;
+    padding: 8px;
+}
+
+h3 {
+    margin-top: 20px;
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+/* Header + search */
+.orders-header{display:flex;justify-content:space-between;align-items:center;margin:8px 0}
+.orders-header h3{margin:0;color:var(--color-text);font-weight:700}
+.orders-controls{display:flex;gap:12px}
+.orders-search{padding:8px 12px;border-radius:8px;border:1px solid var(--color-border);min-width:220px}
+.orders-search:focus{outline:none;box-shadow:0 0 0 4px rgba(46,204,113,0.08)}
+.orders-empty{grid-column:1/-1;padding:18px;text-align:center;color:var(--color-text-muted)}
+.status-select{padding:8px 10px;border-radius:6px;border:1px solid var(--color-border);background:var(--color-primary-light);font-weight:600}
+
+
+@media (max-width:1000px) {
+    .order-item{
+        font-size: 13px;
+        grid-template-columns: 0.6fr 1.6fr 1fr;
+        padding: 12px 10px;
+        gap: 12px;
+    }
+
+    .order-item select{
+        padding: 6px 8px;
+        font-size: 13px;
+    }
+
+    .order-item img{
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+}

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Outfit;
+}
+:root{
+    --color-primary: #2ECC71;       /* Fresh vibrant green (matches user site) */
+    --color-primary-dark: #27AE60;  /* Darker green for hover/active states */
+    --color-primary-light: #E8F6EF; /* Soft pale green for backgrounds */
+    --color-text: #333333;
+    --color-text-muted: #6d6d6d;
+    --color-danger: #e74c3c;
+    --color-border: #e6e9ee;
+    --bg-app: #fcfcfc;
+    --radius-md: 8px;
+}
+body {
+    min-height: 100vh;
+    background-color: var(--bg-app);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--color-border);
+}
+.app-content{
+  display: flex;
+}
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cursor{
+    cursor: pointer;
+}

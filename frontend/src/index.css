@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --color-primary: #2ECC71;       /* Fresh vibrant green (Main buttons, highlights) */
+  --color-primary-dark: #27AE60;  /* Darker green for hover/active states */
+  --color-primary-light: #E8F6EF; /* Soft pale green for backgrounds, select fields, and totals */
+  --color-text-dark: #14532D;     /* Deep green for headings/contrast */
+  --color-text-muted: #6B7280;    /* Muted gray for secondary text */
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Outfit;
+  scroll-behavior: smooth;
+}
+body{
+  min-height: 100vh;;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.app{
+  width: 80%;
+  margin: auto;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

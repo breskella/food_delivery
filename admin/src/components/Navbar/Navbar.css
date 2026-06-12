@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4%;
+}
+
+.admin-brand{
+    display:flex;
+    flex-direction:column;
+}
+.admin-brand-name{
+    font-size:1.25rem;
+    font-weight:700;
+    color: var(--color-primary);
+}
+.admin-brand-sub{
+    font-size:0.8rem;
+    color: var(--color-text-muted);
+}
+
+.navbar .profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
