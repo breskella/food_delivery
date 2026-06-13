@@ -11,7 +11,6 @@ import path from 'path'
 
 // app config
 const app = express()
-const port = process.env.PORT || 4000
 
 // middleware
 app.use(express.json())
@@ -19,7 +18,9 @@ app.use(cors({
     origin: process.env.FRONTEND_URL,
     credentials: true
 }));
-//db connection
+
+// initialize DB connection at module import time so serverless functions can reuse
+// an existing connection across warm invocations when possible
 connectDB();
 
 // determine images directory (use UPLOAD_DIR or temp dir on serverless)
@@ -39,6 +40,6 @@ app.get("/", (req, res) => {
     res.send("API Working")
 })
 
-app.listen(port, () => {
-    console.log(`Server Started on port ${port}`)
-})
+// Export the Express app instead of listening directly. Serverless platforms
+// (like Vercel) will import this module and invoke the app via their handler.
+export default app
