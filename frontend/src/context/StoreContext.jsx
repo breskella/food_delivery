@@ -3,8 +3,7 @@ import axios from "axios";
 
 export const StoreContext = createContext(null);
 
-const url = import.meta.env.VITE_API_URL || 'http://localhost:4000';
-
+const url = import.meta.env.VITE_API_URL || 'https://food-delivery-five-orpin.vercel.app';
 const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(() => {
         try {
